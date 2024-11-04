@@ -1,0 +1,449 @@
+/* 
+Theme Name: My Custom Theme
+Theme URI: https://yourwebsite.com
+Author: Your Name
+Author URI: https://yourwebsite.com
+Description: This is my first custom theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: my-custom-theme
+Tags: custom-background
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+@media screen { html { margin-top: 0px !important; } }
+
+/* Hier wordt de animation aangemaakt via een keyframe */
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+        transform:  translateY(100%);
+    } 
+    100% {
+        opacity: 1;
+        transform:  translateY(0%);
+    }
+}
+
+body {
+    width: 100%;
+    margin: auto;
+    line-height: 1.65;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .menu {
+    font-family: "Kanit", sans-serif;
+}
+
+a {
+    color: #222222;
+    text-decoration: none;
+    font-family: "Kanit", sans-serif;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #3EF0B0;
+}
+
+    /* Dis is een test section */
+    #overlay{
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        background-color: #222222;
+        overflow-y: hidden;
+        transition: 0.5s; 
+    }
+            #a-menu{
+                font-size: 3em;
+                padding-left: .3em;
+                padding-right: .3em ;
+                font-family: "Rubik", sans-serif;
+                    border: 4px #3EF0B0 solid;
+                    border-radius: 50%;
+                font-weight: bold;
+                color: white;
+                background-color: #3EF0B0;
+            }
+            #a-menu:hover{
+                cursor: pointer;
+                background-color: #91e7c7;
+                color: white;
+            }
+            #a-menu:active{
+                box-shadow: 0 5px #2e2e2e;
+                transform: translateY(4px);
+            }
+        
+
+    #close{
+        color: white;
+        cursor: pointer;
+        font-size: 3em;
+        position: absolute;
+        right: 2vw;
+        top: 4vh;
+    }
+        #close:hover{
+            transition: 0.3s;
+            transform: scale(1.5);
+        }
+
+    /* Dit is het einde van de test Section */
+
+    /* Test2 Image Homepage */
+
+    .entry-title{
+        display: none !important;
+    }
+
+    .attachment-my-custom-image-size.size-my-custom-image-size.wp-post-image{
+        display: none;
+    }
+ 
+#top-menu{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    width: 97%;
+}
+
+#under-menu{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    grid-auto-flow: center;
+    margin-top: 10vh;
+}
+#tweede-menu{
+    font-size: 1.3em;
+    margin: 0;
+}
+    #headerButton{
+        background-color: black;
+        color: white;
+        padding: .4em;
+        font-family: "Rubik", sans-serif;
+        border: none;
+        border-radius: 20px;
+        border: black solid 2px;
+    }
+        #headerButton:hover{
+            transform: scale(1.2);
+            transition: .3s;
+        }
+        #headerButton:active{
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+    #headerButton1{
+        background-color: white;
+        color: black;
+        padding: .4em;
+        font-family: "Rubik", sans-serif;
+        border: #222 solid 2px;
+        border-radius: 20px;
+    }
+
+        #headerButton1:hover{
+            transform: scale(1.2);
+            transition: .3s;
+        }
+        #headerButton1:active{
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+#slogan{
+    font-size: 3em;
+    margin: 0;
+    font-weight: 300;
+    text-align: center;
+}
+#tweede-slogan{
+    font-size: 1.3em !important;
+}
+
+
+.site-header {
+    z-index: 8;
+    padding: 0;
+    margin-top: 0;
+    height: 7vh;
+    width: 100%;
+    font-family: "Kanit", sans-serif;
+    position: fixed;
+    top: 0;
+    /* background-color: white; */
+    
+    
+}
+#h1-header{
+    font-size: 2em;
+    color: #3EF0B0;
+}
+.vul{
+    background-color: #ccc;
+}
+    #logo{
+        width: 3vw;
+        height: auto;
+    }
+
+
+.site-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.site-title a {
+    text-decoration: none;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 3rem;
+}
+
+.site-description {
+    margin-top: 0;
+    color: #EAE085;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+
+
+.site-info {
+    text-align: center;
+    font-size: 1.3em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    font-size: 5vw;
+    align-items: center;
+    justify-content: baseline;
+}
+/* Veranderd de kleur van de menu a */
+    .menu a{
+        color: white !important;
+    }
+    .menu a:hover{
+        color: #EAE085 !important;
+        transition: 0.7s;
+        text-decoration: none !important;
+    }
+
+.menu ul {
+    padding: 0;
+}
+
+.menu ul li {
+    list-style-type: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Einde Header */
+
+
+
+.site-content {
+    width: 100%;
+}
+.blog-post{
+    margin: 5vw;
+}
+.blog-post2{
+    margin: 5vw;
+}
+.blog-post3{
+    margin: 5vw;
+}
+.my-vertical-line{
+    border-left: 3px black solid;
+    padding: 10px;
+    
+    
+}
+.my-custom-class{
+    border-top: #000000 solid 3px;
+}
+
+
+.contact-container{
+    margin-bottom: 0vh !important;
+    z-index: 3;
+}
+/* Uit Wesbite gehaald voor testing redenen */
+ .sidebar {
+    width: 20px;
+    list-style: none;
+    font-size: 14px;
+    border-top: 5px solid black;
+    background-color: #353535;
+    height: 100%;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: -6px;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: .5s;
+}
+.sidebar h2, .sidebar a, .sidebar time{
+    color: white;
+}
+.sidebar:hover{
+    width: 300px;
+}
+
+.sidebar-button{
+    position: fixed;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+}
+.sidebar-button a{
+    font-size: .7em;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+
+.test-bruh{
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+.test-bruh a {
+    font-size: 10px !important;
+}
+
+
+#open-button{
+    background-color: blue;
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    cursor: pointer;
+}
+
+
+#close-button:hover{
+    transition: .3s;
+    transform: scale(1.2);
+    text-decoration: none;
+    color: #222;
+    cursor: pointer;
+}
+.widgettitle {
+    border-top: 2px solid;
+    border-bottom: 1px solid #ccc;
+    padding: 0.25rem 0;
+    font-size: 1.25rem;
+}
+
+.widget {
+    margin-bottom: 3rem;
+}
+.div-container-contact{
+    margin: 5vh 10vw 5vh 10vw;
+    font-family: "Bree Serif", serif;
+}
+:where(.is-layout-grid) {
+    gap: 7.5em;
+  }
+
+.group-contact1{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-bottom: 20px;
+}
+.group-contact2{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-bottom: 20px;
+}
+.group-contact3{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+
+.commentlist {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer{
+    background-color: #252525;
+    color: white;
+    min-height: 45vh;
+    /* margin-top: 10vw; */
+
+}
+.wp-block-social-links.is-content-justification-center.is-layout-flex.wp-container-core-social-links-is-layout-1.wp-block-social-links-is-layout-flex{
+    justify-content: center;
+}
+.Media-container{
+    padding: 40px;
+    font-size: 1.5em;
+    font-family: "Kanit", sans-serif;
+}
+.Media-container img {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 40px;
+}
+.is-layout-flex{
+    justify-content: space-between;
+    margin: 0 2vw 0 2vw;
+}
+.Social-Icons{
+    justify-content: center !important;
+}
+.h1-header1{
+    margin: 0;
+}
+.events-header p{
+    font-size: 2em;
+}
+
+.event-container{
+    margin: 5vw !important;
+}
+.test-img{
+    width: 20vw;   
+}
+
